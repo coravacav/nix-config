@@ -5,8 +5,8 @@
   pkgs,
   ...
 }: {
-  # You can import other home-manager modules here
   imports = [
+    ./zsh.nix
   ];
 
   nixpkgs = {
@@ -28,11 +28,16 @@
     neovim
     git
   ];
-  programs.neovim.enable = true;
 
-  # Enable home-manager and git
+  programs.neovim.enable = true;
   programs.home-manager.enable = true;
   programs.git.enable = true;
+  programs.zoxide = { enable = true; enableZshIntegration = true; };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
