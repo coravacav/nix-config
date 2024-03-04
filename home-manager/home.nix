@@ -25,7 +25,33 @@
 
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [ 
+    neofetch
+    starship
+
+    # CLI tools
     eza
+    fd
+    jq
+    ripgrep
+    tokei
+
+    # build tools
+    cmake
+    docker-compose
+    gcc
+    gnumake
+    just
+    meson
+
+    # benchmarking / profiling / debugging
+    cargo-flamegraph
+    hyperfine
+
+    # dev tools
+    cargo-expand
+    cargo-watch
+    gh
+    rustup
   ];
 
   programs.neovim.enable = true;
