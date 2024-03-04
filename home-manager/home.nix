@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    ./zsh.nix
+#    ./zsh.nix
   ];
 
   nixpkgs = {
@@ -25,8 +25,6 @@
 
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [ 
-    neovim
-    git
   ];
 
   programs.neovim.enable = true;
@@ -37,6 +35,13 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.ssh = {
+    enable = true;
+    compression = true;
+    forwardAgent = true;
+    extraConfig = "AddKeysToAgent yes";
   };
 
   # Nicely reload system units when changing configs

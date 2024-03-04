@@ -36,7 +36,7 @@
     auto-optimise-store = true;
   };
 
-  networking.hostName = "nask";
+  networking.hostName = "nwsl";
 
   wsl.enable = true;
   wsl.defaultUser = "nask";

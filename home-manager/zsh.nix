@@ -7,6 +7,7 @@ programs.zsh = {
   dotDir = ".config/zsh";
   enableAutosuggestions = true;
   enableCompletion = true;
+
   syntaxHighlighting.enable = true;
 
   history = {
