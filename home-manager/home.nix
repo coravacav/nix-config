@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-#    ./zsh.nix
+    ./zsh.nix
   ];
 
   nixpkgs = {
