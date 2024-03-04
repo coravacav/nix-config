@@ -39,7 +39,7 @@
   networking.hostName = "nask";
 
   wsl.enable = true;
-  wsl.defaultUser = "nixos";
+  wsl.defaultUser = "nask";
  
   users.users = {
     nask = {
