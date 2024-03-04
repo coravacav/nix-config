@@ -40,6 +40,8 @@
 
   wsl.enable = true;
   wsl.defaultUser = "nask";
+
+  programs.zsh.enable = true;
  
   users.users = {
     nask = {
@@ -49,6 +51,7 @@
       initialPassword = "asdf";
       isNormalUser = true;
       extraGroups = ["wheel"];
+      shell = pkgs.zsh;
     };
   };
 
